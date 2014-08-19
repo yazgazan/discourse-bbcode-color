@@ -11,19 +11,8 @@
     }
   });
   Discourse.Dialect.inlineBetween({
-    start: "[color]",
-    stop:  "[/color]",
-    rawContents: true,
-    emitter: function(contents) {
-      var matches = contents.match(/](.*)/);
-      if (matches) {
-        return ['img', {src: matches[1]}, ""];
-      }
-    }
-  });
-  Discourse.Dialect.inlineBetween({
-    start: "[color]",
-    stop:  "[/color]",
+    start: "[img]",
+    stop:  "[/img]",
     rawContents: true,
     emitter: function(contents) {
       var matches = contents.match(/](.*)/);
